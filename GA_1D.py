@@ -5,8 +5,6 @@ from math import isnan, exp
 import matplotlib.pyplot as plt
 import latexify
 
-#nohup python GA_TESTE.py &         -> comando para carregar o codigo no cluster
-
 class Codigo_genetico:
     def __init__(self, genoma:list, min_max:str):
         self.genoma = genoma
@@ -70,8 +68,6 @@ class Codigo_genetico:
                 arq.write(f'{genoma[0]}    {self.f(genoma[0])}\n')
                 self.lista_de_genoma.append(genoma)
         return [genoma[i] for i in self.desempenho(genoma)]
-
-# implementar o Numba ( DEPOIS DE TERMINAR O CODIGO :D )
 
 if __name__ == '__main__':
     with open("arquivo de parametros.txt", 'r') as parametros:
